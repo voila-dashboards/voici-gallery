@@ -1,0 +1,6 @@
+- title: voici-demo
+  description: First Voici demo
+  content_path: content
+  repo_url: https://github.com/voila-dashboards/voici-demo
+  ref: HEAD
+  image_url: https://i.imgur.com/IeG75O3.png
