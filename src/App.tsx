@@ -1,25 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box, Typography } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Gallery } from "./Gallery";
+
+const theme = createTheme({});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Box className={"vg-main"}>
+        <Box className={"vg-top"}>
+          <Box className={"vg-container"}>
+            <Typography
+              sx={{
+                textAlign: "center",
+                marginBottom: 2,
+                fontFamily: "Chilanka",
+              }}
+              variant="h2"
+            >
+              A gallery of Voici dashboards
+            </Typography>
+            <Typography
+              sx={{ textAlign: "center", maxWidth: 800, margin: "auto" }}
+              variant="body1"
+            >
+              Voici turns Jupyter notebooks into standalone applications. Use
+              these examples for inspiration when creating your own dashboard
+              applications.
+            </Typography>
+          </Box>
+        </Box>
+        <Gallery />
+        <Box className={'vg-footer'}>Powered by Voici and GitHub </Box>
+      </Box>
+    </ThemeProvider>
   );
 }
 
