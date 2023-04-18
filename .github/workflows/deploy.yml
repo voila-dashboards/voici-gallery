@@ -27,11 +27,20 @@ jobs:
           environment-file: 'script/build-environment.yml'
 
       - name: Build the gallery site
+        if: github.ref == 'refs/heads/main'
         shell: bash -l {0}
         run: |
           set -eux
           npm install
           npm run build
+
+      - name: Build the gallery site in debug-mode
+        if: github.ref != 'refs/heads/main'
+        shell: bash -l {0}
+        run: |
+          set -eux
+          npm install
+          npm run build:dev
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
