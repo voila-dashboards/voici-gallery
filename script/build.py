@@ -21,7 +21,8 @@ VOICI = "voici"
 
 
 class Builder:
-    def __init__(self, config_path: Path) -> None:
+    def __init__(self, config_path: Path, debug=False) -> None:
+        self._debug = debug
         self.load_config(config_path)
         create_dir(VOICI_BUILD_DIR)
         create_dir(VOICI_STATIC_DIR)
@@ -57,6 +58,8 @@ class Builder:
             subprocess.run(cmd)
             return True
         except Exception as e:
+            if self._debug:
+                raise
             logger.error(e)
             return False
 
@@ -67,8 +70,10 @@ class Builder:
 
         try:
             subprocess.run(cmd, cwd=repo_path)
-            return f"voici/{index}"
-        except Exception:
+            return f"voici-gallery/voici/{index}"
+        except Exception as e:
+            if self._debug:
+                raise
             logger.error(e)
             return None      
 
@@ -78,5 +83,5 @@ if __name__ == "__main__":
         logging.basicConfig(level=logging.DEBUG)
 
     config_file = ROOT_DIR / "script" / Path("gallery.yaml")
-    builder = Builder(config_file)
+    builder = Builder(config_file, debug=debug)
     builder.build()

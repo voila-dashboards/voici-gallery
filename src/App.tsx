@@ -31,7 +31,6 @@ function App() {
           </Box>
         </Box>
         <Gallery />
-        <Box className={'vg-footer'}>Powered by Voici and GitHub </Box>
       </Box>
     </ThemeProvider>
   );

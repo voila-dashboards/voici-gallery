@@ -1,31 +1,31 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 7.5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F2F2F2;
+  background: #f2f2f2;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #BDBDBD;
+  background: #bdbdbd;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6E6E6E;
+  background: #6e6e6e;
 }
 
 .vg-main {
@@ -37,6 +37,9 @@ code {
   background: #f8e14ba1;
   color: rgba(0, 0, 0, 0.8);
   padding: 20px;
+  padding-bottom: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+    rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
 }
 
 .vg-container {
@@ -46,16 +49,24 @@ code {
   margin-left: auto;
 }
 
-.vg-gallery{
+.vg-gallery {
+  overflow: auto;
+  background: #5dbcaf5c ;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.vg-gallery-content {
   flex-grow: 1;
   margin-top: 20px;
   margin-bottom: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
-  overflow: auto;
+  overflow: none;
 }
 .vg-footer {
   text-align: center;
   color: rgba(0, 0, 0, 0.8);
   padding-bottom: 5px;
+  flex-grow: 0;
 }
