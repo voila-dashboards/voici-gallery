@@ -3,7 +3,7 @@
   content_path: content/demo.ipynb
   build_env: build-environment.yml
   repo_url: https://github.com/voila-dashboards/voici-demo
-  image_url: https://i.imgur.com/IeG75O3.png
+  image_url: https://raw.githubusercontent.com/voila-gallery/ipympl/master/thumbnail.png
 
 - title: voici-demo
   description: Second Voici demo
@@ -11,4 +11,4 @@
   repo_url: https://github.com/voila-dashboards/voici-demo
   build_env: build-environment.yml
   branch: main
-  image_url: https://i.imgur.com/IeG75O3.png
+  image_url: https://raw.githubusercontent.com/ismms-himc/visium-clustergrammer2/master/img/small_visium_gif.gif

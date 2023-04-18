@@ -4,6 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { useCallback } from "react";
 
 export interface IGalleryItemProps {
   title: string;
@@ -14,6 +15,9 @@ export interface IGalleryItemProps {
 }
 
 export function GalleryItem(props: IGalleryItemProps) {
+  const openNewTab = useCallback(() => {
+    window.open(props.dashboard_url, "_blank")?.focus();
+  }, [props.dashboard_url]);
   return (
     <Card
       sx={(theme) => ({
@@ -27,23 +31,29 @@ export function GalleryItem(props: IGalleryItemProps) {
       elevation={6}
     >
       <CardMedia
-        sx={{ height: 175 }}
+        sx={{ height: 175, backgroundSize: "contain", cursor: "pointer" }}
         image={props.image_url ?? ""}
         title={props.title}
+        onClick={openNewTab}
       />
-      <CardContent sx={{ height: 100 }}>
-        <Typography gutterBottom variant="h6" component="div">
+      <CardContent sx={{ height: 100, cursor: "pointer" }} onClick={openNewTab}>
+        <Typography gutterBottom variant="h5" component="div">
           {props.title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {props.description}
-        </Typography>
+        <Typography variant="body2">{props.description}</Typography>
       </CardContent>
-      <CardActions sx={{ flexDirection: "row-reverse" }}>
+      <CardActions sx={{ flexDirection: "row-reverse" , background:'#eaeaea'}}>
         <Button href={`${props.dashboard_url}`} target="_blank" size="small">
-          Start
+          Open
         </Button>
-        <Button href={props.repo_url} target="_blank" color="secondary" size="small">Source</Button>
+        <Button
+          href={props.repo_url}
+          target="_blank"
+          color="secondary"
+          size="small"
+        >
+          Source
+        </Button>
       </CardActions>
     </Card>
   );
