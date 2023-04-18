@@ -29,7 +29,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:dashboard": "python script/build.py",
-    "copy:dashboard":"cp -r ./voici_build/voici ./build"
+    "copy:dashboard": "cp -r ./voici_build/voici ./build",
+    "lint": "npx prettier --write . --ignore-path .gitignore"
   },
   "eslintConfig": {
     "extends": [
