@@ -8,7 +8,7 @@ from typing import Optional
 import yaml
 import logging
 
-from utils import create_dir
+from utils import create_dir, delete_file_by_extension
 
 logger = logging.getLogger(__file__)
 ROOT_DIR = Path(__file__).parents[1]
@@ -16,8 +16,6 @@ VOICI_BUILD_DIR = ROOT_DIR / "voici_build"
 VOICI_STATIC_DIR = VOICI_BUILD_DIR / "voici"
 GIT = "git"
 VOICI = "voici"
-
-
 
 
 class Builder:
@@ -70,7 +68,9 @@ class Builder:
 
         try:
             subprocess.run(cmd, cwd=repo_path)
-            return f"voici-gallery/voici/{index}"
+            # Remove map files to save space
+            delete_file_by_extension(output_dir, 'js.map')
+            return f"voici/{index}"
         except Exception as e:
             if self._debug:
                 raise

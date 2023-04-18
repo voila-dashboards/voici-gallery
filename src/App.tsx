@@ -29,6 +29,7 @@ function App() {
               applications.
             </Typography>
           </Box>
+          <span className="ribbon"><a href="https://github.com/trungleduc/voici-gallery/blob/main/README.md" rel="noreferrer" target="_blank">Add your own</a></span>
         </Box>
         <Gallery />
       </Box>

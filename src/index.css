@@ -51,7 +51,7 @@ code {
 
 .vg-gallery {
   overflow: auto;
-  background: #5dbcaf5c ;
+  background: #5dbcaf5c;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -69,4 +69,64 @@ code {
   color: rgba(0, 0, 0, 0.8);
   padding-bottom: 5px;
   flex-grow: 0;
+}
+
+.ribbon a {
+  background: #356962;
+  color: #fff;
+  text-decoration: none;
+  font-family: Chilanka;
+  text-align: center;
+  padding: 5px 40px;
+  font-size: 1.1rem;
+  line-height: 2rem;
+  position: relative;
+  transition: 0.5s;
+}
+.ribbon a:hover {
+  background: #c11;
+  color: #fff;
+}
+
+.ribbon a::before,
+.ribbon a::after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 1px;
+  background: #ffff;
+}
+
+.ribbon a::after {
+  bottom: 1px;
+  top: auto;
+}
+@media screen and (min-width: 1000px) {
+  .ribbon {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 260px;
+    overflow: hidden;
+    height: 260px;
+    z-index: 9999;
+  }
+  .ribbon a {
+    width: 160px;
+    position: absolute;
+    top: 40px;
+    right: -60px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    box-shadow: 4px 4px 5px  rgba(0, 0, 0, 0.8)
+    /* box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.8); */
+
+  }
 }
