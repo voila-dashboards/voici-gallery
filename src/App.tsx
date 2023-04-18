@@ -24,9 +24,9 @@ function App() {
               sx={{ textAlign: 'center', maxWidth: 800, margin: 'auto' }}
               variant="body1"
             >
-              Voici turns Jupyter notebooks into standalone applications. Use
-              these examples for inspiration when creating your own dashboard
-              applications.
+              Voici turns any Jupyter Notebook into a static web application.
+              Use these examples for inspiration when creating your own
+              dashboard applications.
             </Typography>
           </Box>
           <span className="ribbon">
