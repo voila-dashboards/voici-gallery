@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/voici-gallery/static/css/main.aca3dc01.css",
-    "main.js": "/voici-gallery/static/js/main.3c803b45.js",
+    "main.css": "/voici-gallery/static/css/main.2d8b6d78.css",
+    "main.js": "/voici-gallery/static/js/main.9ed120d3.js",
     "static/js/787.3443762e.chunk.js": "/voici-gallery/static/js/787.3443762e.chunk.js",
     "static/media/roboto-all-500-normal.woff": "/voici-gallery/static/media/roboto-all-500-normal.0ab669b7a0d19b178f57.woff",
     "static/media/roboto-all-700-normal.woff": "/voici-gallery/static/media/roboto-all-700-normal.a457fde362a540fcadff.woff",
@@ -36,12 +36,12 @@
     "static/media/roboto-greek-ext-300-normal.woff2": "/voici-gallery/static/media/roboto-greek-ext-300-normal.35b9d6be04b95f0f0530.woff2",
     "static/media/roboto-greek-ext-700-normal.woff2": "/voici-gallery/static/media/roboto-greek-ext-700-normal.bd9854c751441ccc1a70.woff2",
     "index.html": "/voici-gallery/index.html",
-    "main.aca3dc01.css.map": "/voici-gallery/static/css/main.aca3dc01.css.map",
-    "main.3c803b45.js.map": "/voici-gallery/static/js/main.3c803b45.js.map",
+    "main.2d8b6d78.css.map": "/voici-gallery/static/css/main.2d8b6d78.css.map",
+    "main.9ed120d3.js.map": "/voici-gallery/static/js/main.9ed120d3.js.map",
     "787.3443762e.chunk.js.map": "/voici-gallery/static/js/787.3443762e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aca3dc01.css",
-    "static/js/main.3c803b45.js"
+    "static/css/main.2d8b6d78.css",
+    "static/js/main.9ed120d3.js"
   ]
 }
