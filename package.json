@@ -25,9 +25,11 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run build:dashboard && react-scripts build && npm run copy:dashboard",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:dashboard": "python script/build.py",
+    "copy:dashboard":"cp -r ./voici_build/voici ./build"
   },
   "eslintConfig": {
     "extends": [

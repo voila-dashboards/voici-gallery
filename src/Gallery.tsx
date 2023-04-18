@@ -29,7 +29,7 @@ export function Gallery() {
               }}
               elevation={4}
             >
-              Link here
+              <a href="/voici-gallery/voici/0">Link</a>
             </Item>
           </Grid>
         ))}

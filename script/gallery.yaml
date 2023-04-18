@@ -1,6 +1,14 @@
 - title: voici-demo
   description: First Voici demo
+  content_path: content/demo.ipynb
+  build_env: build-environment.yml
+  repo_url: https://github.com/voila-dashboards/voici-demo
+  image_url: https://i.imgur.com/IeG75O3.png
+
+- title: voici-demo
+  description: Second Voici demo
   content_path: content
   repo_url: https://github.com/voila-dashboards/voici-demo
-  ref: HEAD
+  build_env: build-environment.yml
+  branch: main
   image_url: https://i.imgur.com/IeG75O3.png
