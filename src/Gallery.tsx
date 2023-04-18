@@ -1,13 +1,11 @@
-import { Box, Container } from "@mui/material";
-import Grid from "@mui/material/Grid";
+import { Box, Container } from '@mui/material';
+import Grid from '@mui/material/Grid';
 
-import { GalleryItem, IGalleryItemProps } from "./GalleryItem";
+import { GalleryItem, IGalleryItemProps } from './GalleryItem';
 
-import dashboards from "./dashboard.json";
+import dashboards from './dashboard.json';
 
 export function Gallery() {
-  console.log("dashboards", dashboards);
-
   return (
     <Box className="vg-gallery">
       <Container className="vg-gallery-content" maxWidth="lg">
@@ -19,7 +17,7 @@ export function Gallery() {
           ))}
         </Grid>
       </Container>
-      <Box className={"vg-footer"}>Powered by Voici and GitHub </Box>
+      <Box className={'vg-footer'}>Powered by Voici and GitHub </Box>
     </Box>
   );
 }

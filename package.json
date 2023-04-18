@@ -26,10 +26,13 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "npm run build:dashboard && react-scripts build && npm run copy:dashboard",
+    "build:dev": "npm run build:dashboard:dev && react-scripts build && npm run copy:dashboard",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:dashboard": "python script/build.py",
-    "copy:dashboard":"cp -r ./voici_build/voici ./build"
+    "build:dashboard:dev": "python script/build.py --debug",
+    "copy:dashboard": "cp -r ./voici_build/voici ./build",
+    "lint": "npx prettier --write . --ignore-path .gitignore"
   },
   "eslintConfig": {
     "extends": [
