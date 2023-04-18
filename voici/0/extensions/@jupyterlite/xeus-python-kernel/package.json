@@ -1,0 +1,106 @@
+{
+  "name": "@jupyterlite/xeus-python-kernel",
+  "version": "0.8.0",
+  "description": "A Python kernel for JupyterLite, powered by Xeus",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlite",
+    "jupyterlite-extension"
+  ],
+  "homepage": "https://github.com/jupyterlite/xeus-python-kernel",
+  "bugs": {
+    "url": "https://github.com/jupyterlite/xeus-python-kernel/issues"
+  },
+  "license": "BSD-3-Clause",
+  "author": "JupyterLite Contributors",
+  "files": [
+    "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf,wasm}",
+    "style/**/*.{css,js,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "style": "style/index.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jupyterlite/xeus-python-kernel.git"
+  },
+  "scripts": {
+    "copy-files": "copyfiles -u 1 src/xpython_wasm.wasm src/xpython_wasm.js src/python_data.js src/*.data src/*.js lib",
+    "build:worker": "webpack --config worker.webpack.config.js --mode=development",
+    "build": "jlpm run build:xeus-python && jlpm run build:lib && jlpm run build:worker && jlpm run copy-files && jlpm run build:labextension:dev",
+    "build:xeus-python": "python jupyterlite_xeus_python/build.py --output-path src --build-worker",
+    "build:worker:prod": "webpack --config worker.webpack.config.js --mode=production",
+    "build:prod": "jlpm run clean && jlpm run build build:xeus-python && jlpm run build:lib && jlpm run build:worker:prod && jlpm run copy-files && jlpm run build:labextension",
+    "build:labextension": "jupyter labextension build .",
+    "build:labextension:dev": "jupyter labextension build --development True .",
+    "build:lib": "tsc",
+    "clean": "jlpm run clean:lib",
+    "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
+    "clean:labextension": "rimraf jupyterlite_xeus_python/labextension",
+    "clean:all": "jlpm run clean:lib && jlpm run clean:labextension",
+    "eslint": "eslint . --ext .ts,.tsx --fix",
+    "eslint:check": "eslint . --ext .ts,.tsx",
+    "install:extension": "jlpm run build",
+    "lint": "jlpm prettier && yarn eslint",
+    "lint:check": "jlpm prettier:check && yarn eslint:check",
+    "prettier": "prettier --list-different --write \"**/*{.ts,.tsx,.js,.jsx,.css,.json,.md,.yml,.html}\"",
+    "prettier:check": "prettier --list-different \"**/*{.ts,.tsx,.js,.jsx,.css,.json,.md,.yml,.html}\"",
+    "watch": "run-p watch:src watch:labextension",
+    "watch:src": "tsc -w",
+    "watch:labextension": "jupyter labextension watch ."
+  },
+  "dependencies": {
+    "@jupyterlite/contents": "^0.1.0",
+    "@jupyterlite/server": "^0.1.0",
+    "comlink": "^4.3.1"
+  },
+  "devDependencies": {
+    "@jupyterlab/builder": "^3.4.1",
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "@typescript-eslint/parser": "^4.8.1",
+    "copy-webpack-plugin": "^9.0.1",
+    "copyfiles": "^2.4.1",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "file-loader": "^6.2.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.1",
+    "rimraf": "^3.0.2",
+    "source-map-loader": "^4.0.0",
+    "typescript": "~4.2.3",
+    "shx": "^0.3.0"
+  },
+  "sideEffects": [
+    "style/*.css",
+    "style/index.js"
+  ],
+  "styleModule": "style/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "jupyterlab": {
+    "extension": true,
+    "outputDir": "share/jupyter/labextensions/@jupyterlite/xeus-python-kernel",
+    "webpackConfig": "./webpack.config.js",
+    "sharedPackages": {
+      "@jupyterlite/kernel": {
+        "bundled": false,
+        "singleton": true
+      },
+      "@jupyterlite/contents": {
+        "bundled": false,
+        "singleton": true
+      }
+    },
+    "_build": {
+      "load": "static/remoteEntry.35b4eac217ec6bf078a4.js",
+      "extension": "./extension",
+      "style": "./style"
+    }
+  },
+  "jupyterlite": {
+    "liteExtension": true
+  }
+}

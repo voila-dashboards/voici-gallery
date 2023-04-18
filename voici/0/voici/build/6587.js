@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_JUPYTERLAB_CORE_OUTPUT=self.webpackChunk_JUPYTERLAB_CORE_OUTPUT||[]).push([[6587],{56587:(s,T,U)=>{U.d(T,{N:()=>_});const _="2.0.0"}}]);
