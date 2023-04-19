@@ -27,7 +27,7 @@ npm install
 Build the frontend
 
 ```bash
-npm install
+npm run build
 ```
 
 In the build step, the repositories defined in the `script/gallery.yaml` file will be cloned and converted into static dashboards.
