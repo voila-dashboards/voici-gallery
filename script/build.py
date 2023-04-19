@@ -33,9 +33,9 @@ class Builder:
     def build(self) -> None:
         for idx, config in enumerate(self._yaml_data):
             self.build_single(idx, config)
-        
-        artifact_path = ROOT_DIR / 'src' / 'dashboard.json'
-        with open(artifact_path, 'w') as f:
+
+        artifact_path = ROOT_DIR / "src" / "dashboard.json"
+        with open(artifact_path, "w") as f:
             json.dump(self._artifact, f, indent=2)
 
     def build_single(self, index: int, config: Dict) -> None:
@@ -43,14 +43,16 @@ class Builder:
         create_dir(repo_path)
         cloned = self.clone_repo(config["repo_url"], config.get("branch"), repo_path)
         if cloned:
-            dashboard_url = self.build_voici(repo_path, config.get("content_path", "."), index)
+            dashboard_url = self.build_voici(
+                repo_path, config.get("content_path", "."), index
+            )
             if dashboard_url is not None:
-                config['dashboard_url'] = dashboard_url
+                config["dashboard_url"] = dashboard_url
                 self._artifact.append(config)
 
     def clone_repo(self, url: str, branch: Optional[str], dest: Path) -> bool:
         branch = branch or "main"
-        cmd = ["git", "clone", "-b", branch, url, str(dest)]
+        cmd = [GIT, "clone", "-b", branch, url, str(dest)]
         logger.debug(f"Cloning {url} at {branch}")
         try:
             subprocess.run(cmd)
@@ -61,21 +63,24 @@ class Builder:
             logger.error(e)
             return False
 
-    def build_voici(self, repo_path: Path, content_path: str, index: int) -> Optional[str]:
+    def build_voici(
+        self, repo_path: Path, content_path: str, index: int
+    ) -> Optional[str]:
         output_dir = VOICI_STATIC_DIR / str(index)
         logger.debug(f"Building voici from {repo_path} to {output_dir}")
-        cmd = [ "voici", "build", "--contents", content_path, "--output-dir", output_dir]
+        cmd = [VOICI, "build", "--contents", content_path, "--output-dir", output_dir]
 
         try:
             subprocess.run(cmd, cwd=repo_path)
             # Remove map files to save space
-            delete_file_by_extension(output_dir, 'js.map')
+            delete_file_by_extension(output_dir, "js.map")
             return f"voici/{index}"
         except Exception as e:
             if self._debug:
                 raise
             logger.error(e)
-            return None      
+            return None
+
 
 if __name__ == "__main__":
     debug = "--debug" in sys.argv
