@@ -1,7 +1,7 @@
 {
   "name": "voici-gallery",
   "version": "0.1.0",
-  "homepage": "https://trungleduc.github.io/voici-gallery",
+  "homepage": "https://voila-dashboards.github.io/voici-gallery",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",

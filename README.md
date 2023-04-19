@@ -1,13 +1,13 @@
 # Voici Gallery
 
-![Github Actions Status](https://github.com/trungleduc/voici-gallery/actions/workflows/deploy.yml/badge.svg)
+![Github Actions Status](https://github.com/voila-dashboard/voici-gallery/actions/workflows/deploy.yml/badge.svg)
 
-This is a gallery of [Voici](https://github.com/voila-dashboards/voici) examples. View the gallery at https://trungleduc.github.io/voici-gallery/
+This is a gallery of [Voici](https://github.com/voila-dashboards/voici) examples. View the gallery at https://voila-dashboards.github.io/voici-gallery/
 
 ## Contributing new examples
 
 1. Create a repository with your notebook. You can start from the [voici-demo](https://github.com/voila-dashboards/voici-demo) example.
-2. Create a PR to [Voici gallery](https://github.com/trungleduc/voici-gallery) that
+2. Create a PR to [Voici gallery](https://github.com/voila-dashboards/voici-gallery) that
    modifies `script/gallery.yaml` file.
    You will need to fill in the following fields:
    - `title`: the title used in the page thumbnail.
