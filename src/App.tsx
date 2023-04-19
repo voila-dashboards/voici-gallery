@@ -31,7 +31,7 @@ function App() {
           </Box>
           <span className="ribbon">
             <a
-              href="https://github.com/trungleduc/voici-gallery/blob/main/README.md"
+              href="https://github.com/voila-dashboards/voici-gallery/blob/main/README.md"
               rel="noreferrer"
               target="_blank"
             >
