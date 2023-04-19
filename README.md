@@ -1,6 +1,6 @@
 # Voici Gallery
 
-![Github Actions Status](https://github.com/voila-dashboard/voici-gallery/actions/workflows/deploy.yml/badge.svg)
+![Github Actions Status](https://github.com/voila-dashboards/voici-gallery/actions/workflows/deploy.yml/badge.svg)
 
 This is a gallery of [Voici](https://github.com/voila-dashboards/voici) examples. View the gallery at https://voila-dashboards.github.io/voici-gallery/
 
