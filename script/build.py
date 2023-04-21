@@ -41,14 +41,18 @@ class Builder:
     def build_single(self, index: int, config: Dict) -> None:
         repo_path = VOICI_BUILD_DIR / str(index)
         create_dir(repo_path)
-        cloned = self.clone_repo(config["repo_url"], config.get("branch"), repo_path)
-        if cloned:
-            dashboard_url = self.build_voici(
-                repo_path, config.get("content_path", "."), index
-            )
-            if dashboard_url is not None:
-                config["dashboard_url"] = dashboard_url
-                self._artifact.append(config)
+        dashboard_url = config.get('dashboard_url', None)
+        if dashboard_url is not None:
+            self._artifact.append(config)
+        else:
+            cloned = self.clone_repo(config["repo_url"], config.get("branch"), repo_path)
+            if cloned:
+                dashboard_url = self.build_voici(
+                    repo_path, config.get("content_path", "."), index
+                )
+                if dashboard_url is not None:
+                    config["dashboard_url"] = dashboard_url
+                    self._artifact.append(config)
 
     def clone_repo(self, url: str, branch: Optional[str], dest: Path) -> bool:
         branch = branch or "main"
