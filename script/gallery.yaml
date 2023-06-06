@@ -19,5 +19,5 @@
   
   - title: core-inflation
   description: Understanding inflation and monetary policy by CORE Economics.  
-  repo_url: https://github.com/coreecon/coreecon.github.io
+  dashboard_url: https://coreecon.github.io/voici/render/inflation.html?
   image_url: https://raw.githubusercontent.com/coreecon/coreecon.github.io/main/extras/Core_Simulator.png
