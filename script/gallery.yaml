@@ -12,9 +12,8 @@
 
 - title: photos-on-the-map
   description: Show photos and pictures on a folium map
-  content_path: notebooks
   repo_url: https://github.com/jtpio/pyconde-pydata-berlin-2023-jupyterlite-tutorial
-  branch: main
+  dashboard_url: https://pyconde2023-jupyterlite.readthedocs.io/en/latest/tutorial.html
   image_url: https://user-images.githubusercontent.com/591645/233269835-d038f742-853a-4c15-90e3-f38700cc2f2f.png
 
 - title: core-inflation
