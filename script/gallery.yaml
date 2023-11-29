@@ -8,16 +8,16 @@
   description: SP500 stock dashboard
   repo_url: https://github.com/voila-dashboards/voici-demo
   dashboard_url: https://trungleduc.github.io/voici-stock-dashboard/voici/render/dashboard.html
-  image_path: stock.png
+  image_url: https://user-images.githubusercontent.com/4451292/152875156-90b6eadf-1569-4d22-ab30-d3866e00ae9a.png
 
 - title: photos-on-the-map
   description: Show photos and pictures on a folium map
   content_path: notebooks
   repo_url: https://github.com/jtpio/pyconde-pydata-berlin-2023-jupyterlite-tutorial
   branch: main
-  image_path: photos.png
+  image_url: https://user-images.githubusercontent.com/591645/233269835-d038f742-853a-4c15-90e3-f38700cc2f2f.png
 
 - title: core-inflation
   description: Understanding inflation and monetary policy by CORE Economics.
   dashboard_url: https://coreecon.github.io/voici/render/inflation.html?
-  image_path: Core_Simulator.png
+  image_url: https://raw.githubusercontent.com/coreecon/coreecon.github.io/main/extras/Core_Simulator.png
