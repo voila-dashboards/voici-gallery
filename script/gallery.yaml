@@ -1,8 +1,8 @@
-- title: voici-demo
-  description: First Voici demo
+- title: Development-indicators
+  description: A simple Voici demo using bqplot and ipywidgets
   content_path: content/demo.ipynb
   repo_url: https://github.com/voila-dashboards/voici-demo
-  image_url: https://raw.githubusercontent.com/voila-gallery/ipympl/master/thumbnail.png
+  image_url: https://private-user-images.githubusercontent.com/21197331/286634630-07e1a426-78d6-4885-92bb-0678674111be.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDEyNjk2NjIsIm5iZiI6MTcwMTI2OTM2MiwicGF0aCI6Ii8yMTE5NzMzMS8yODY2MzQ2MzAtMDdlMWE0MjYtNzhkNi00ODg1LTkyYmItMDY3ODY3NDExMWJlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzExMjklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMTI5VDE0NDkyMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTBjY2JjMjk0NzlhNDZjYjkzODdjYzQ4YWFhMTBlMzZjNTFmZDQ2NzgyZWZkNmNjZjg3OTAxOTc3OWQwODhlMzUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.HqsMLfvKzXl_6gybreSzS1oZ8mrwni1YEjSpXLAcacc
 
 - title: stock-dashboard
   description: SP500 stock dashboard
