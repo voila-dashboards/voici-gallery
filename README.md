@@ -16,7 +16,7 @@ This is a gallery of [Voici](https://github.com/voila-dashboards/voici) examples
    - `content_path`: the local path to the notebooks, this path will be passed to the `--contents` parameter of `Voici` command, default to `.`
    - `branch`: the branch to be checked out from `repo_url` repository, default to `main`.
    - `dashboard_url`: the URL of the deployed voici dashboard. If the voici dashboard is already deployed elsewhere you can use this field to bypass the build step. If you use this option, you do not need to provide the `repo_url`, `content_path` and the `branch` field.
-   - `image_url`: the URL of the picture to use as thumbnail.
+   - `image_path`: the name of your picture under `public/images`.
 3. Once the PR is merged into `main`, the gallery is automatically redeployed and the new example will be visible shortly after.
 
 ## Development

@@ -10,7 +10,7 @@ export interface IGalleryItemProps {
   title: string;
   repo_url: string;
   dashboard_url: string;
-  image_url?: string;
+  image_path?: string;
   description?: string;
 }
 
@@ -32,7 +32,7 @@ export function GalleryItem(props: IGalleryItemProps) {
     >
       <CardMedia
         sx={{ height: 175, backgroundSize: 'contain', cursor: 'pointer' }}
-        image={props.image_url ?? ''}
+        image={props.image_path ? `./images/${props.image_path}` : ''}
         title={props.title}
         onClick={openNewTab}
       />
