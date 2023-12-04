@@ -1,12 +1,12 @@
 - title: Development-indicators
   description: A simple Voici demo using bqplot and ipywidgets
-  content_path: content/demo.ipynb
   repo_url: https://github.com/voila-dashboards/voici-demo
+  dashboard_url: https://voici.readthedocs.io/en/latest/_static/lite/voici/render/voici.html
   image_path: voici-demo.png
 
 - title: stock-dashboard
   description: SP500 stock dashboard
-  repo_url: https://github.com/voila-dashboards/voici-demo
+  repo_url: https://github.com/trungleduc/voici-stock-dashboard
   dashboard_url: https://trungleduc.github.io/voici-stock-dashboard/voici/render/dashboard.html
   image_url: https://user-images.githubusercontent.com/4451292/152875156-90b6eadf-1569-4d22-ab30-d3866e00ae9a.png
 
