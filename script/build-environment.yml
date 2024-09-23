@@ -5,6 +5,5 @@ dependencies:
   - python
   - pip
   - nodejs=18
-  - pip:
-      - voici>=0.5.0rc0,<0.6.0
-      - jupyterlite-xeus-python>=1.0.0a3,<2.0.0
+  - voici >=0.7.0,<0.8.0
+  - jupyterlite-xeus >=2.0.0,<3.0.0
