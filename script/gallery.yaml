@@ -20,3 +20,9 @@
   description: Understanding inflation and monetary policy by CORE Economics.
   dashboard_url: https://coreecon.github.io/voici/render/inflation.html?
   image_url: https://raw.githubusercontent.com/coreecon/coreecon.github.io/main/extras/Core_Simulator.png
+
+- title: compound-interest-calculator
+  description: Calculate and visualize compound interest growth including periodic contributions.
+  repo_url: https://github.com/jtpio/compound-interest-calculator
+  dashboard_url: https://jtpio.github.io/compound-interest-calculator/voici/render/app.html
+  image_url: https://raw.githubusercontent.com/jtpio/compound-interest-calculator/refs/heads/main/screenshot.png
